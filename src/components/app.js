@@ -6,7 +6,7 @@ export default class App extends Component {
   render() {
     return (
       <div className="text-center">
-        <h2 className="text-center text-capitalize">Weather Search Component</h2>
+        <h2 style={{margin: "20px 5px 0px 5px"}} className="text-center text-capitalize">Weather Search Component</h2>
         <SearchBar />
         <WeatherList />
       </div>

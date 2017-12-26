@@ -1,3 +1,5 @@
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
+
 module.exports = {
   entry: [
     './src/index.js'
@@ -24,4 +26,9 @@ module.exports = {
     contentBase: './'
   },
   devtool: 'cheap-module-source-map',
+  plugins: [
+    // new UglifyJsPlugin({
+    //   sourceMap: true
+    // })
+  ]
 };

@@ -6,7 +6,11 @@ const ROOT_URL = `http://api.openweathermap.org/data/2.5/forecast?appid=${API_KE
 export const FETCH_WEATHER = 'FETCH_WEATHER';
 
 // Action creator
-export function fetchWeather(city) {
+// These two ways are identical same
+// Traditonal way
+// function fetchWeather(city) {
+// ES6 way
+const fetchWeather = (city) => {
   // These two are the same url
   // const url = ROOT_URL + 'q=' + city + ',us';
   const url = `${ROOT_URL}&q=${city},us`;
@@ -16,3 +20,10 @@ export function fetchWeather(city) {
     payload: request,
   };
 }
+
+// Note:
+// When export functions as default, do not use { abc } from '' when import it,
+// use directly `abc` from '' instead
+// export default fetchWeather;
+
+export default fetchWeather;

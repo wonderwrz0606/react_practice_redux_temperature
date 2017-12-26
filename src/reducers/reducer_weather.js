@@ -1,6 +1,6 @@
 import { FETCH_WEATHER } from '../actions/index';
 
-const WeatherReducer = function(state = [], action) {
+const weatherReducer = (state = [], action) => {
   switch(action.type) {
     case FETCH_WEATHER:
       // return state.concat([ action.payload.data ]);
@@ -10,4 +10,4 @@ const WeatherReducer = function(state = [], action) {
   }
 }
 
-export default WeatherReducer;
+export default weatherReducer;

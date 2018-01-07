@@ -1,5 +1,7 @@
 import { combineReducers } from 'redux';
+import { reducer as formReducer } from 'redux-form';
 import weatherReducer from './reducer_weather';
+import createPostReducer from './reducer_post';
 
 // These two ways are identical same
 // Traditional way
@@ -13,6 +15,8 @@ import weatherReducer from './reducer_weather';
 // In this example, it should be weather: weatherReducer(stete.weather, action)
 const rootReducer = combineReducers({
   weather: weatherReducer,
+  createPost: createPostReducer,
+  form: formReducer
 });
 
 export default rootReducer;

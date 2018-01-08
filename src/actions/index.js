@@ -22,7 +22,7 @@ const fetchWeather = (city) => {
 }
 
 const createPost = (values) => {
-  console.log(`action createPost: ${values}`);
+  alert(`action createPost -> title: ${values.title}, cat: ${values.cat}`);
   return {
     type: CREATE_POST,
     payload: values

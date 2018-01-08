@@ -33,6 +33,7 @@ class ReduxFormExample extends Component {
   render() {
     const { handleSubmit } = this.props;
 
+    // If we want to use the props submitCallBack, then we need do handleSubmit(callBack)
     // <form onSubmit={handleSubmit(this.submit1.bind(this))}>
     return (
       <div>
@@ -70,7 +71,7 @@ function validate(values) {
 }
 
 function submit2(values) {
-  console.log(`submit2: ${values}`);
+  alert("title: " + values.title + " cats: " + values.cat);
 }
 
 export default reduxForm({
